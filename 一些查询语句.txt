@@ -1,0 +1,14 @@
+1  判断是否为数字
+
+ISNUMERIC ( expression )
+
+如果是数字类型则返回 1 ，不是则返回 0
+
+但ISNUMERIC有时是不可靠的，如果你不允许expression包含有任何字母，则会判断错：
+
+如：ISNUMERIC（‘23e4’）返回 1
+
+   ISNUMERIC（‘23d4’）返回 1
+=======================
+2 转化为数字
+convert(int,doc_number)
