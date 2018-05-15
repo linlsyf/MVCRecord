@@ -12,3 +12,10 @@ ISNUMERIC ( expression )
 =======================
 2 转化为数字
 convert(int,doc_number)
+Convert(varchar(100),acceptancedate,102) //转化年月
+
+3  full join 可以用来 拼接两个不同的字段，横向展示
+4 COALESCE 判断并获取多个字段中第一个非空字段
+5 count(distinct   flowformid)   可以筛选掉重复的数据
+
+6 sum(case  when (retentionperiod='30年' and destructiontypecode<2 )  统计并筛选条件
