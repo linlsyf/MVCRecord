@@ -1,0 +1,34 @@
+
+首先 确保
+一  严重: Exception sending context initialized event to listener instance of class com.fzxy.zxy.core.
+
+1.web.xml中没有配置
+<context-param>
+<param-name>contextConfigLocation</param-name>
+<param-value>classpath:applicationContext.xml</param-value>
+</context-param>
+
+======================================================================================
+Tomcat7启动报Error listenerStart错误
+
+在不能启动的Web应用目录（我这里是st）下WEB-INF/classes目录中，新建logging.properties文件，内容参考如下：
+复制代码
+
+handlers = org.apache.juli.FileHandler, java.util.logging.ConsoleHandler
+
+############################################################
+# Handler specific properties.
+# Describes specific configuration info for Handlers.
+############################################################
+
+org.apache.juli.FileHandler.level = FINE
+org.apache.juli.FileHandler.directory = ${catalina.base}/logs
+org.apache.juli.FileHandler.prefix = error-debug.
+
+java.util.logging.ConsoleHandler.level = FINE
+java.util.logging.ConsoleHandler.formatter = java.util.logging.SimpleFormatter
+
+复制代码
+
+
+再启动Tomcat后，后台显示出了错误原因，并且Tomcat的日志目录中也出现了文件“error-debug.2013-11-23.log”，其中记录了错误详细信息。下面内容供参考（每个人出错的原因不一样，需要具体问题具体分析解决）：
