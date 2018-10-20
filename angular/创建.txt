@@ -34,3 +34,14 @@ npm install -g @angular/cli
 
 ng new 项目名称 
 
+==========
+具体详见
+安装：
+https://blog.csdn.net/zhy13087344578/article/details/60745667
+
+
+创建：
+https://www.jb51.net/article/119668.htm
+
+
+
