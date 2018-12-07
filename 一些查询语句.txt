@@ -19,3 +19,6 @@ Convert(varchar(100),acceptancedate,102) //转化年月
 5 count(distinct   flowformid)   可以筛选掉重复的数据
 
 6 sum(case  when (retentionperiod='30年' and destructiontypecode<2 )  统计并筛选条件
+
+
+select (select 数值1 from 表1)+(select 数值2 from 表2) from dual

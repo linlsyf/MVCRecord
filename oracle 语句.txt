@@ -1,0 +1,7 @@
+ <#if tableName='DA_SW'>
+         and   bfrq <= ${$sf_toDate('${endDate}')}
+  
+
+
+   <#elseif   tableName='DA_HT_VOL'>
+        and   nd <=   extract(year from ${$sf_toDate('${endDate}')})
