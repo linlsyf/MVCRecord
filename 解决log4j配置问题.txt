@@ -1,3 +1,0 @@
-1 log4j:WARN No appenders could be found for logger 解决方案：
-  1 要检查jar包是否冲突
-  2 log4j.properties 所在的文件夹resources要设置成资源文件
